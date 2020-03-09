@@ -1,0 +1,137 @@
+
+<html>
+<head>
+    <title>Panel informacyjny - V LO Gdańsk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="switch.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<div class="container text-center" style="width:960px;">
+<br>
+	<div class="row">
+		<div class="well"> 
+		   <h2 style="letter-spacing: 2px; text-shadow: 2px 2px 5px gray;"><b>Panel informacyjny V LO Gdańsk</b></h3>
+		</div> 
+	</div>
+	<br><br><br><br>
+	<div class="row text-left">
+      <div class="col-md-3">
+                        <a href="http://www.vlo.gda.pl"><img src="img/stronaVLO.png" style="width:210px;"></a>
+                </div>
+
+    		<div class="col-md-3">
+			<a href="https://adfs.edu.gdansk.pl/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2faplikacje.edu.gdansk.pl%3a443%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252f&wct=2017-09-01T22%3a50%3a20Z"><img src="img/dziennik-elektroniczny.png" style="width:210px;"></a>
+		</div>
+
+		<div class="col-md-3">
+                        <a href="https://www.facebook.com/vlogdansk/"><img src="img/VLO-Facebook.png" style="width:210px;"></a>
+                </div>
+
+                <div class="col-md-3">
+                        <a href="http://e.vlo.gda.pl"><img src="img/evlo.png" style="width:210px;"></a>
+                </div>
+	</div>	
+	
+<br><br>
+	<div class="row slideanim">
+		<div class="col-md-4 alert alert-info">
+			<p style="text-align: justify; font-size: 16px;">
+			<b>Dekalog użytkownika komputera</b>
+			<ol style="text-align: justify; font-size: 14px;">
+			<li>Zostaw komputer w takim stanie jakim go zastałeś, a nawet lepszym.</li>
+			<li>Nie zmieniaj tapety.</li>
+			<li>Nie zaśmiecaj pulpitu.</li>
+			<li>Nie podłączaj pendrive, bo i tak nie możesz go użyć.</li>
+			<li>Nie zapisuj hasła do dziennika elektronicznego.</li>
+			<li>Nie zostawiaj otwartego dziennika podczas przerwy.</li>
+                        <li>Nie majstruj przy kablach.</li>
+			<li>Nie odłączaj od prądu włączonego projektora - psujesz lampę.</li>
+			<li>Wyłącz komputer, jeśli jesteś osobą, która ma ostatnie zajęcia.</li>
+                        <li>Administrator jest obecnie zajęty, zgłoś problem mailem.</li>
+			</ol>
+			</p>
+			<p style="text-align: right; font-size: 16px;">Administrator VLO</p>
+		</div>
+		<div class="col-md-4">
+
+
+    <div class="box">
+        <div id="content-1">
+            <div class="header">
+                <div id="refresh" class="icon-button">
+
+                </div>
+                <div id="settings" class="icon-button">
+
+                </div>
+            </div>
+            <div id="counter">
+                <div id="slots_container">
+                    <div class="slots" id="slots_a">
+                        <div class="wrapper"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="inputs">
+                <input placeholder="Min" id="min" type="number">
+
+                <input placeholder="Max" id="max" type="number">
+            </div>
+            <div class="btn" id="generate" data-usable="true">Generuj</div>
+        </div>
+        <div id="content-2">
+            <div class="header" style="margin-bottom: 8px">
+                <div class="title">Settings</div>
+                <div id="close" class="icon-button"></div>
+            </div>
+
+            <div class="switch">
+                <input type="checkbox" id="switch1" class="switch__input" autocomplete="off" checked>
+                <label for="switch1" class="switch__label">No repeat</label>
+            </div>
+
+            <div class="switch">
+                <input type="checkbox" id="switch2" class="switch__input" autocomplete="off">
+                <label for="switch2" class="switch__label">No animations</label>
+            </div>
+            <a href="https://github.com/miloszratajczyk/rsng">https://github.com/miloszratajczyk/rsng</a>
+        </div>
+    </div>
+</div>
+                <div class="col-md-4 alert alert-success">
+			<p style="text-align: justify; font-size: 16px;">
+			<b>Kontakt:</b><br>
+			Zgłoś problem z dziennikiem elektronicznym: <br><span class="glyphicon glyphicon-envelope"></span> gpe@vlo.gda.pl<br><br>
+			Zgłoś problem ze sprzętem komputerowym: <br><span class="glyphicon glyphicon-envelope"></span> serwis@vlo.gda.pl
+			</p>
+                </div>
+	</div>
+<footer class="well footer">
+<div class="col-md-6" style="text-align:left">&copy 2020 Copyright V Liceum Ogólnokształcące w Gdańsku</div>
+<div class="col-md-6" style="text-align:right">Autor: Jarosław Drzeżdżon</div><br>
+</footer>
+</div>
+
+
+</body>
+
+<script>
+    document.getElementById("settings").onclick = () => {
+        document.getElementById("content-2").classList.add('visible');
+    }
+
+    document.getElementById("close").onclick = () => {
+        document.getElementById("content-2").classList.remove('visible');
+    }
+</script>
+
+<script src="script.js"></script>
+
+</html>
